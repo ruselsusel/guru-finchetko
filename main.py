@@ -39,7 +39,7 @@ async def handle_photo(message: types.Message):
 async def handle_text(message: types.Message):
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-4",
+            model="gpt-4o",
             messages=[
                 {"role": "system", "content": "Ты Гуру-Финчётко — строгий, умный финансовый советник. Отвечай кратко и по делу."},
                 {"role": "user", "content": message.text}
