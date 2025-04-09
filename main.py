@@ -31,7 +31,7 @@ async def handle_options(message: types.Message):
 async def analyze_text(message: types.Message):
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-4",
+            model="gpt-4o",
             messages=[
                 {"role": "system", "content": "Ты Гуру-Финчётко — опытный финансовый аналитик. Отвечай кратко, по делу, строго, с лёгкой иронией. Можно вставить анекдот."},
                 {"role": "user", "content": message.text}
